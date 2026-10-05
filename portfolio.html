@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            color: #333;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: #0f4c81;
+            color: white;
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 26px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #00d4ff;
+        }
+
+        /* Home Section */
+        #home {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 60px 10%;
+            background: linear-gradient(135deg, #e8f4ff, #ffffff);
+        }
+
+        .home-text {
+            max-width: 600px;
+        }
+
+        .home-text h2 {
+            font-size: 45px;
+            color: #0f4c81;
+            margin-bottom: 15px;
+        }
+
+        .home-text h3 {
+            font-size: 25px;
+            margin-bottom: 20px;
+        }
+
+        .home-text p {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #0f4c81;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+        }
+
+        .btn:hover {
+            background-color: #00a6d6;
+        }
+
+        .home-image {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background-color: #d9efff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 90px;
+        }
+
+        /* Common Section */
+        section {
+            padding: 70px 10%;
+        }
+
+        section h2 {
+            text-align: center;
+            color: #0f4c81;
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        /* About */
+        .about-content {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            line-height: 1.8;
+            font-size: 18px;
+        }
+
+        /* Skills */
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .skill {
+            background-color: white;
+            padding: 25px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .skill h3 {
+            color: #0f4c81;
+            margin-bottom: 10px;
+        }
+
+        /* Projects */
+        .projects-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .project {
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .project h3 {
+            color: #0f4c81;
+            margin-bottom: 12px;
+        }
+
+        .project p {
+            line-height: 1.6;
+        }
+
+        /* Education */
+        .education {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .education-box {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 5px solid #0f4c81;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        .education-box h3 {
+            color: #0f4c81;
+            margin-bottom: 8px;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 12px 0;
+            font-size: 18px;
+        }
+
+        .contact a {
+            color: #0f4c81;
+            text-decoration: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0f4c81;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 900px) {
+
+            #home {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .skills-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .projects-container {
+                grid-template-columns: 1fr;
+            }
+
+            nav a {
+                margin-left: 10px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                font-size: 14px;
+                margin-left: 8px;
+            }
+
+            .home-text h2 {
+                font-size: 35px;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .home-image {
+                width: 220px;
+                height: 220px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <h1>My Portfolio</h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+
+    <!-- Home -->
+    <section id="home">
+
+        <div class="home-text">
+
+            <h2>Hello, I'm Sahithi Sri Rapeti</h2>
+
+            <h3>Student | Web Developer | Learner</h3>
+
+            <p>
+                Welcome to my portfolio! I am a student interested in
+                learning new technologies and improving my technical skills.
+                I enjoy working on projects and developing my communication
+                and presentation skills.
+            </p>
+
+            <a href="#contact" class="btn">Contact Me</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <div class="about-content">
+
+            <p>
+                I am a student with an interest in technology and software
+                development. I like learning new things and exploring
+                different programming concepts.
+            </p>
+
+            <br>
+
+            <p>
+                I am currently working on improving my technical skills,
+                communication skills, and presentation abilities. I also
+                want to overcome stage fear and become more confident while
+                presenting my ideas.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">
+                <h3>HTML</h3>
+                <p>Creating structured and responsive web pages.</p>
+            </div>
+
+            <div class="skill">
+                <h3>CSS</h3>
+                <p>Designing attractive and responsive websites.</p>
+            </div>
+
+            <div class="skill">
+                <h3>Java</h3>
+                <p>Understanding programming and application development.</p>
+            </div>
+
+            <div class="skill">
+                <h3>JSP & MySQL</h3>
+                <p>Developing dynamic web applications with databases.</p>
+            </div>
+
+            <div class="skill"> 
+		<h3>MySQL</h3> <p>Working with databases, tables, queries and data management.</p> 
+	    
+	    </div>
+
+            <div class="skill">
+                <h3>Flutter</h3>
+                <p>Building mobile application interfaces.</p>
+            </div>
+
+            <div class="skill">
+                <h3>Communication</h3>
+                <p>Improving communication and presentation skills.</p>
+            </div>
+
+            <div class="skill">
+                <h3>Problem Solving</h3>
+                <p>Learning to analyze problems and find solutions.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="projects-container">
+
+            <div class="project">
+                <h3>Hospital Management System</h3>
+
+                <p>
+                    A web-based hospital management system developed using
+                    JSP, Java, MySQL and Tomcat. It includes appointment
+                    booking, patient management, billing and other
+                    hospital services.
+                </p>
+            </div>
+
+
+            <div class="project">
+                <h3>Flutter Applications</h3>
+
+                <p>
+                    Developing simple Flutter applications to understand
+                    Dart programming, widgets, layouts and mobile
+                    application development.
+                </p>
+            </div>
+
+
+            <div class="project">
+                <h3>Personal Portfolio</h3>
+
+                <p>
+                    A responsive personal portfolio website created using
+                    HTML and CSS to showcase my skills, education and
+                    projects.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education -->
+    <section id="education">
+
+        <h2>Education</h2>
+
+        <div class="education">
+
+            <div class="education-box">
+
+                <h3>Bachelor's Degree</h3>
+
+                <p>
+                    Currently pursuing my undergraduate studies.
+                </p>
+
+                <p>
+                    Interested in programming, web development and
+                    emerging technologies.
+                </p>
+
+            </div>
+
+
+            <div class="education-box">
+
+                <h3>Technical Learning</h3>
+
+                <p>
+                    Learning HTML, CSS, Java, JSP, MySQL, Dart and Flutter
+                    through academic projects and practical exercises.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact">
+
+        <h2>Contact Me</h2>
+
+        <div class="contact">
+
+            <p>
+                📧 Email:
+                <a href="mailto:yourmail@gmail.com">
+                    sahithi.rapeti24@sasi.ac.in
+                </a>
+            </p>
+
+            <p>
+                📱 Phone: +91 75690 13629
+            </p>
+
+            <p>
+                📍 Location: Andhra Pradesh, India
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Sahithi | My Portfolio
+        </p>
+
+    </footer>
+
+</body>
+</html>
