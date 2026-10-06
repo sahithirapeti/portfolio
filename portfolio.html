@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>My Portfolio</title>
+    <title>Sahithi | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -15,310 +27,713 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f7fb;
-            color: #333;
+            font-family: 'Poppins', sans-serif;
+            background: #080b12;
+            color: #e8edf5;
+            line-height: 1.7;
         }
 
-        /* Navigation Bar */
         header {
-            background-color: #0f4c81;
-            color: white;
-            padding: 20px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 18px 8%;
+
+            background: rgba(8, 11, 18, 0.85);
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.08);
         }
 
         header h1 {
-            font-size: 26px;
+            font-size: 24px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        header h1 span {
+            color: #00c6ff;
         }
 
         nav a {
-            color: white;
+            color: #cbd5e1;
             text-decoration: none;
-            margin-left: 25px;
-            font-size: 16px;
+
+            margin-left: 28px;
+
+            font-size: 15px;
+            font-weight: 500;
+
+            transition: 0.3s;
         }
 
         nav a:hover {
-            color: #00d4ff;
+            color: #00c6ff;
         }
 
-        /* Home Section */
         #home {
-            min-height: 90vh;
+            min-height: 92vh;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 60px 10%;
-            background: linear-gradient(135deg, #e8f4ff, #ffffff);
+
+            padding: 80px 10%;
+
+            background:
+                radial-gradient(circle at 80% 40%,
+                rgba(0,198,255,0.12),
+                transparent 35%);
         }
 
         .home-text {
-            max-width: 600px;
+            max-width: 650px;
+        }
+
+        .home-text .small-text {
+            color: #00c6ff;
+            font-size: 17px;
+            font-weight: 500;
+            margin-bottom: 8px;
         }
 
         .home-text h2 {
-            font-size: 45px;
-            color: #0f4c81;
-            margin-bottom: 15px;
+            font-size: 56px;
+            line-height: 1.2;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+
+        .home-text h2 span {
+            color: #00c6ff;
         }
 
         .home-text h3 {
-            font-size: 25px;
+            font-size: 22px;
+            color: #a8b3c5;
+            font-weight: 400;
             margin-bottom: 20px;
         }
 
         .home-text p {
-            font-size: 18px;
-            line-height: 1.7;
-            margin-bottom: 25px;
+            color: #9ca8ba;
+            font-size: 16px;
+            margin-bottom: 30px;
+            max-width: 600px;
         }
 
         .btn {
             display: inline-block;
-            padding: 12px 25px;
-            background-color: #0f4c81;
-            color: white;
+
+            padding: 12px 26px;
+
+            color: #ffffff;
+            background: linear-gradient(135deg, #0077ff, #00c6ff);
+
             text-decoration: none;
-            border-radius: 25px;
+
+            border-radius: 8px;
+
+            font-weight: 500;
+
+            transition: 0.3s;
+
+            box-shadow: 0 8px 25px rgba(0,198,255,0.2);
         }
 
         .btn:hover {
-            background-color: #00a6d6;
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(0,198,255,0.35);
+        }
+
+        .social-icons {
+            margin-top: 25px;
+        }
+
+        .social-icons a {
+            display: inline-flex;
+
+            width: 42px;
+            height: 42px;
+
+            align-items: center;
+            justify-content: center;
+
+            margin-right: 10px;
+
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 50%;
+
+            color: #cbd5e1;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: #00c6ff;
+            border-color: #00c6ff;
+            transform: translateY(-3px);
         }
 
         .home-image {
-            width: 280px;
-            height: 280px;
+            width: 300px;
+            height: 300px;
+
             border-radius: 50%;
-            background-color: #d9efff;
+
             display: flex;
-            justify-content: center;
             align-items: center;
-            font-size: 90px;
+            justify-content: center;
+
+            background:
+                linear-gradient(#0b101a, #0b101a) padding-box,
+                linear-gradient(135deg, #0077ff, #00c6ff) border-box;
+
+            border: 3px solid transparent;
+
+            box-shadow:
+                0 0 50px rgba(0,198,255,0.15);
+
+            font-size: 95px;
         }
 
-        /* Common Section */
         section {
-            padding: 70px 10%;
+            padding: 90px 10%;
         }
 
         section h2 {
             text-align: center;
-            color: #0f4c81;
-            font-size: 32px;
-            margin-bottom: 40px;
+
+            font-size: 34px;
+
+            margin-bottom: 45px;
+
+            color: #ffffff;
         }
 
-        /* About */
+        section h2 span {
+            color: #00c6ff;
+        }
+
+
+        #about {
+            background: #0b0f17;
+        }
+
         .about-content {
-            max-width: 900px;
+            max-width: 850px;
+
             margin: auto;
+
             text-align: center;
-            line-height: 1.8;
-            font-size: 18px;
+
+            color: #9ca8ba;
+
+            font-size: 16px;
         }
 
-        /* Skills */
+        .about-content p {
+            margin-bottom: 18px;
+        }
+
+
         .skills-container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
             gap: 20px;
         }
 
         .skill {
-            background-color: white;
-            padding: 25px;
+            padding: 28px 20px;
+
             text-align: center;
+
+            background: rgba(255,255,255,0.03);
+
+            border: 1px solid rgba(255,255,255,0.08);
+
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            transform: translateY(-7px);
+
+            border-color: rgba(0,198,255,0.5);
+
+            background: rgba(0,198,255,0.05);
+
+            box-shadow:
+                0 10px 35px rgba(0,0,0,0.3);
+        }
+
+        .skill i {
+            font-size: 30px;
+
+            color: #00c6ff;
+
+            margin-bottom: 12px;
         }
 
         .skill h3 {
-            color: #0f4c81;
-            margin-bottom: 10px;
+            color: #ffffff;
+
+            margin-bottom: 8px;
+
+            font-size: 18px;
         }
 
-        /* Projects */
+        .skill p {
+            color: #8995a8;
+
+            font-size: 14px;
+        }
+
+
+        #profiles {
+            background: #080b12;
+        }
+
+        .profiles-container {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .profile-card {
+            padding: 28px 20px;
+
+            text-align: center;
+
+            background: rgba(255,255,255,0.03);
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            border-radius: 12px;
+
+            text-decoration: none;
+
+            transition: 0.3s;
+
+            color: #ffffff;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-7px);
+
+            border-color: rgba(0,198,255,0.5);
+
+            background: rgba(0,198,255,0.05);
+
+            box-shadow:
+                0 10px 35px rgba(0,0,0,0.3);
+        }
+
+        .profile-icon {
+            margin-bottom: 12px;
+        }
+
+        .profile-icon i {
+            font-size: 30px;
+
+            color: #00c6ff;
+
+            transition: 0.3s;
+        }
+
+        .profile-card h3 {
+            color: #ffffff;
+
+            margin-bottom: 8px;
+
+            font-size: 18px;
+        }
+
+        .profile-card p {
+            color: #8995a8;
+
+            font-size: 14px;
+
+            margin-bottom: 15px;
+        }
+
+        .profile-button {
+            display: inline-block;
+
+            color: #00c6ff;
+
+            font-size: 13px;
+
+            font-weight: 500;
+        }
+
+        .profile-button i {
+            margin-left: 5px;
+
+            transition: 0.3s;
+        }
+
+        .profile-card:hover .profile-icon i {
+            color: #ffffff;
+
+            transform: scale(1.1);
+        }
+
+        .profile-card:hover .profile-button i {
+            transform: translateX(5px);
+        }
+
+
+        #projects {
+            background: #0b0f17;
+        }
+
         .projects-container {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 25px;
         }
 
         .project {
-            background-color: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 30px;
+
+            background: rgba(255,255,255,0.03);
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            border-radius: 14px;
+
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-7px);
+
+            border-color: rgba(0,198,255,0.45);
+
+            box-shadow:
+                0 15px 40px rgba(0,0,0,0.35);
+        }
+
+        .project-icon {
+            width: 50px;
+            height: 50px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 10px;
+
+            background: rgba(0,198,255,0.1);
+
+            color: #00c6ff;
+
+            font-size: 22px;
+
+            margin-bottom: 20px;
         }
 
         .project h3 {
-            color: #0f4c81;
+            color: #ffffff;
+
             margin-bottom: 12px;
         }
 
         .project p {
-            line-height: 1.6;
+            color: #929daf;
+
+            font-size: 14px;
         }
 
-        /* Education */
+
         .education {
             max-width: 800px;
+
             margin: auto;
         }
 
         .education-box {
-            background-color: white;
-            padding: 25px;
+            position: relative;
+
+            padding: 28px;
+
             margin-bottom: 20px;
-            border-left: 5px solid #0f4c81;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+
+            background: rgba(255,255,255,0.03);
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            border-left: 3px solid #00c6ff;
+
+            border-radius: 10px;
+
+            transition: 0.3s;
+        }
+
+        .education-box:hover {
+            transform: translateX(5px);
+
+            background: rgba(0,198,255,0.04);
         }
 
         .education-box h3 {
-            color: #0f4c81;
+            color: #ffffff;
+
             margin-bottom: 8px;
         }
 
-        /* Contact */
+        .education-box p {
+            color: #929daf;
+
+            font-size: 15px;
+        }
+
+
+        #contact {
+            background: #0b0f17;
+        }
+
         .contact {
             text-align: center;
         }
 
+        .contact-card {
+            max-width: 600px;
+
+            margin: auto;
+
+            padding: 30px;
+
+            background: rgba(255,255,255,0.03);
+
+            border: 1px solid rgba(255,255,255,0.08);
+
+            border-radius: 14px;
+        }
+
         .contact p {
-            margin: 12px 0;
-            font-size: 18px;
+            margin: 18px 0;
+
+            color: #a8b3c5;
+        }
+
+        .contact i {
+            color: #00c6ff;
+
+            margin-right: 10px;
         }
 
         .contact a {
-            color: #0f4c81;
+            color: #a8b3c5;
+
             text-decoration: none;
         }
 
-        /* Footer */
-        footer {
-            background-color: #0f4c81;
-            color: white;
-            text-align: center;
-            padding: 20px;
+        .contact a:hover {
+            color: #00c6ff;
         }
 
-        /* Responsive Design */
+
+        footer {
+            padding: 25px;
+
+            text-align: center;
+
+            background: #06080d;
+
+            color: #6f7b8d;
+
+            font-size: 14px;
+        }
+
+
         @media (max-width: 900px) {
 
             #home {
                 flex-direction: column;
+
                 text-align: center;
-                gap: 40px;
+
+                gap: 50px;
+            }
+
+            .home-text p {
+                margin-left: auto;
+                margin-right: auto;
             }
 
             .skills-container {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+            .profiles-container {
+                grid-template-columns:
+                    repeat(2, 1fr);
             }
 
             .projects-container {
                 grid-template-columns: 1fr;
             }
 
-            nav a {
-                margin-left: 10px;
+            .home-text h2 {
+                font-size: 45px;
             }
+
         }
 
         @media (max-width: 600px) {
 
             header {
                 flex-direction: column;
+
                 gap: 15px;
             }
 
             nav a {
-                font-size: 14px;
                 margin-left: 8px;
+
+                font-size: 12px;
+            }
+
+            #home {
+                padding-top: 60px;
             }
 
             .home-text h2 {
-                font-size: 35px;
+                font-size: 36px;
+            }
+
+            .home-image {
+                width: 220px;
+                height: 220px;
+
+                font-size: 70px;
             }
 
             .skills-container {
                 grid-template-columns: 1fr;
             }
 
-            .home-image {
-                width: 220px;
-                height: 220px;
+            .profiles-container {
+                grid-template-columns: 1fr;
             }
+
+            section {
+                padding: 70px 7%;
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <!-- Navigation -->
+
     <header>
-        <h1>My Portfolio</h1>
+
+        <h1>
+            My Portfolio<span>.</span>
+        </h1>
 
         <nav>
+
             <a href="#home">Home</a>
+
             <a href="#about">About</a>
+
+            <a href="#profiles">Profiles</a>
+
             <a href="#skills">Skills</a>
+
             <a href="#projects">Projects</a>
+
             <a href="#education">Education</a>
+
             <a href="#contact">Contact</a>
+
         </nav>
+
     </header>
 
-
-    <!-- Home -->
     <section id="home">
 
         <div class="home-text">
 
-            <h2>Hello, I'm Sahithi Sri Rapeti</h2>
+            <div class="small-text">
+                Hello, I'm
+            </div>
 
-            <h3>Student | Web Developer | Learner</h3>
+            <h2>
+                Sahithi <span>Sri Rapeti</span>
+            </h2>
+
+            <h3>
+                Student | Web Developer | Learner
+            </h3>
 
             <p>
-                Welcome to my portfolio! I am a student interested in
-                learning new technologies and improving my technical skills.
-                I enjoy working on projects and developing my communication
-                and presentation skills.
+                I am a student interested in learning new technologies
+                and improving my technical skills. I enjoy working on
+                projects and developing my communication and presentation
+                skills.
             </p>
 
-            <a href="#contact" class="btn">Contact Me</a>
+            <a href="#contact" class="btn">
+                Contact Me
+            </a>
+
+        </div>
+
+
+        <div class="home-image">
+
+            <i class="fa-solid fa-user"></i>
 
         </div>
 
     </section>
 
 
-    <!-- About -->
     <section id="about">
 
-        <h2>About Me</h2>
+        <h2>
+            About <span>Me</span>
+        </h2>
 
         <div class="about-content">
 
             <p>
-                I am a student with an interest in technology and software
-                development. I like learning new things and exploring
-                different programming concepts.
+                I am a student with an interest in technology and
+                software development. I like learning new things
+                and exploring different programming concepts.
             </p>
-
-            <br>
 
             <p>
                 I am currently working on improving my technical skills,
                 communication skills, and presentation abilities. I also
-                want to overcome stage fear and become more confident while
-                presenting my ideas.
+                want to become more confident while presenting my ideas.
             </p>
 
         </div>
@@ -326,51 +741,239 @@
     </section>
 
 
-    <!-- Skills -->
+    <section id="profiles">
+
+        <h2>
+            My <span>Profiles</span>
+        </h2>
+
+        <div class="profiles-container">
+
+
+            <a href="https://github.com/sahithirapeti"
+               target="_blank"
+               class="profile-card">
+
+                <div class="profile-icon">
+                    <i class="fa-brands fa-github"></i>
+                </div>
+
+                <h3>
+                    GitHub
+                </h3>
+
+                <p>
+                    View my projects, repositories and coding work.
+                </p>
+
+                <span class="profile-button">
+                    Visit Profile
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </a>
+
+
+            <a href="https://www.linkedin.com/in/sahithi-rapeti-177805402/"
+               target="_blank"
+               class="profile-card">
+
+                <div class="profile-icon">
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+
+                <h3>
+                    LinkedIn
+                </h3>
+
+                <p>
+                    Connect with me and view my professional profile.
+                </p>
+
+                <span class="profile-button">
+                    Visit Profile
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </a>
+
+            <a href="https://www.codechef.com/users/sahithisri_11"
+               target="_blank"
+               class="profile-card">
+
+                <div class="profile-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+
+                <h3>
+                    CodeChef
+                </h3>
+
+                <p>
+                    View my competitive programming profile and practice.
+                </p>
+
+                <span class="profile-button">
+                    Visit Profile
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </a>
+
+
+            <a href="https://leetcode.com/u/f0RoPkLpDG/"
+               target="_blank"
+               class="profile-card">
+
+                <div class="profile-icon">
+                    <i class="fa-solid fa-laptop-code"></i>
+                </div>
+
+                <h3>
+                    LeetCode
+                </h3>
+
+                <p>
+                    View my coding practice and problem-solving progress.
+                </p>
+
+                <span class="profile-button">
+                    Visit Profile
+                    <i class="fa-solid fa-arrow-right"></i>
+                </span>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
     <section id="skills">
 
-        <h2>My Skills</h2>
+        <h2>
+            My <span>Skills</span>
+        </h2>
 
         <div class="skills-container">
 
+
             <div class="skill">
-                <h3>HTML</h3>
-                <p>Creating structured and responsive web pages.</p>
+
+                <i class="fa-brands fa-html5"></i>
+
+                <h3>
+                    HTML
+                </h3>
+
+                <p>
+                    Creating structured and responsive web pages.
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <i class="fa-brands fa-css3-alt"></i>
+
+                <h3>
+                    CSS
+                </h3>
+
+                <p>
+                    Designing attractive and responsive websites.
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <i class="fa-brands fa-java"></i>
+
+                <h3>
+                    Java
+                </h3>
+
+                <p>
+                    Understanding programming and application development.
+                </p>
+
+            </div>
+
+
+            <div class="skill">
+
+                <i class="fa-solid fa-code"></i>
+
+                <h3>
+                    JSP
+                </h3>
+
+                <p>
+                    Developing dynamic web applications.
+                </p>
+
             </div>
 
             <div class="skill">
-                <h3>CSS</h3>
-                <p>Designing attractive and responsive websites.</p>
+
+                <i class="fa-solid fa-database"></i>
+
+                <h3>
+                    MySQL
+                </h3>
+
+                <p>
+                    Working with databases, tables, queries and data management.
+                </p>
+
             </div>
 
+
             <div class="skill">
-                <h3>Java</h3>
-                <p>Understanding programming and application development.</p>
+
+                <i class="fa-brands fa-flutter"></i>
+
+                <h3>
+                    Flutter
+                </h3>
+
+                <p>
+                    Building mobile application interfaces.
+                </p>
+
             </div>
 
+
             <div class="skill">
-                <h3>JSP & MySQL</h3>
-                <p>Developing dynamic web applications with databases.</p>
+
+                <i class="fa-solid fa-comments"></i>
+
+                <h3>
+                    Communication
+                </h3>
+
+                <p>
+                    Improving communication and presentation skills.
+                </p>
+
             </div>
 
-            <div class="skill"> 
-		<h3>MySQL</h3> <p>Working with databases, tables, queries and data management.</p> 
-	    
-	    </div>
 
             <div class="skill">
-                <h3>Flutter</h3>
-                <p>Building mobile application interfaces.</p>
-            </div>
 
-            <div class="skill">
-                <h3>Communication</h3>
-                <p>Improving communication and presentation skills.</p>
-            </div>
+                <i class="fa-solid fa-lightbulb"></i>
 
-            <div class="skill">
-                <h3>Problem Solving</h3>
-                <p>Learning to analyze problems and find solutions.</p>
+                <h3>
+                    Problem Solving
+                </h3>
+
+                <p>
+                    Analyzing problems and finding effective solutions.
+                </p>
+
             </div>
 
         </div>
@@ -378,44 +981,80 @@
     </section>
 
 
-    <!-- Projects -->
+
     <section id="projects">
 
-        <h2>My Projects</h2>
+        <h2>
+            My <span>Projects</span>
+        </h2>
 
         <div class="projects-container">
 
+
+
             <div class="project">
-                <h3>Hospital Management System</h3>
+
+                <div class="project-icon">
+
+                    <i class="fa-solid fa-hospital"></i>
+
+                </div>
+
+                <h3>
+                    Hospital Management System
+                </h3>
 
                 <p>
-                    A web-based hospital management system developed using
-                    JSP, Java, MySQL and Tomcat. It includes appointment
-                    booking, patient management, billing and other
-                    hospital services.
+                    A web-based hospital management system developed
+                    using JSP, Java, MySQL and Tomcat. It includes
+                    appointment booking, patient management, billing
+                    and other hospital services.
                 </p>
+
             </div>
 
 
+
             <div class="project">
-                <h3>Flutter Applications</h3>
+
+                <div class="project-icon">
+
+                    <i class="fa-solid fa-mobile-screen"></i>
+
+                </div>
+
+                <h3>
+                    Flutter Applications
+                </h3>
 
                 <p>
-                    Developing simple Flutter applications to understand
-                    Dart programming, widgets, layouts and mobile
-                    application development.
+                    Developing simple Flutter applications such as
+                    a BMI calculator to understand mobile application
+                    development.
                 </p>
+
             </div>
 
 
+
             <div class="project">
-                <h3>Personal Portfolio</h3>
+
+                <div class="project-icon">
+
+                    <i class="fa-solid fa-laptop-code"></i>
+
+                </div>
+
+                <h3>
+                    Personal Portfolio
+                </h3>
 
                 <p>
-                    A responsive personal portfolio website created using
-                    HTML and CSS to showcase my skills, education and
-                    projects.
+                    A responsive personal portfolio website created
+                    using HTML and CSS to showcase my skills,
+                    education and projects.
                 </p>
+
             </div>
 
         </div>
@@ -423,24 +1062,28 @@
     </section>
 
 
-    <!-- Education -->
     <section id="education">
 
-        <h2>Education</h2>
+        <h2>
+            My <span>Education</span>
+        </h2>
 
         <div class="education">
 
+
             <div class="education-box">
 
-                <h3>Bachelor's Degree</h3>
+                <h3>
+                    Bachelor's Degree
+                </h3>
 
                 <p>
                     Currently pursuing my undergraduate studies.
                 </p>
 
                 <p>
-                    Interested in programming, web development and
-                    emerging technologies.
+                    Interested in programming, web development
+                    and emerging technologies.
                 </p>
 
             </div>
@@ -448,10 +1091,12 @@
 
             <div class="education-box">
 
-                <h3>Technical Learning</h3>
+                <h3>
+                    Technical Learning
+                </h3>
 
                 <p>
-                    Learning HTML, CSS, Java, JSP, MySQL, Dart and Flutter
+                    Learning HTML, CSS, Java, JSP, MySQL and Flutter
                     through academic projects and practical exercises.
                 </p>
 
@@ -462,41 +1107,62 @@
     </section>
 
 
-    <!-- Contact -->
     <section id="contact">
 
-        <h2>Contact Me</h2>
+        <h2>
+            Contact <span>Me</span>
+        </h2>
 
         <div class="contact">
 
-            <p>
-                📧 Email:
-                <a href="mailto:yourmail@gmail.com">
-                    sahithi.rapeti24@sasi.ac.in
-                </a>
-            </p>
+            <div class="contact-card">
 
-            <p>
-                📱 Phone: +91 75690 13629
-            </p>
 
-            <p>
-                📍 Location: Andhra Pradesh, India
-            </p>
+                <p>
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <a href="mailto:sahithi.rapeti24@sasi.ac.in">
+                        sahithi.rapeti24@sasi.ac.in
+                    </a>
+
+                </p>
+
+
+                <p>
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    +91 75690 13629
+
+                </p>
+
+
+                <p>
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    Andhra Pradesh, India
+
+                </p>
+
+
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- Footer -->
     <footer>
 
         <p>
-            © 2026 Sahithi | My Portfolio
+            © 2026 Sahithi Sri Rapeti | Portfolio
         </p>
 
     </footer>
 
+
 </body>
+
 </html>
